@@ -31,7 +31,7 @@ fun isValidSudoku(board: Array<Array<String>>): Boolean {
             val seen = mutableSetOf<String>()
             for (row in rowStart until rowStart + subgridSize) {
                 for (col in colStart until colStart + subgridSize) {
-                    if (row < n && col < n) {
+                    if (row < n && col < n) { //ensures we don't go out of bounds if n is not a perfect square.
                         val cell = board[row][col]
                         if (cell != "-" && !seen.add(cell)) {
                             return false
