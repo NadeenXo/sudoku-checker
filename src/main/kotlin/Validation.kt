@@ -5,6 +5,10 @@ fun isValidSudoku(board: Array<Array<String>>): Boolean {
     val n = board.size
     val subgridSize = sqrt(n.toDouble()).toInt()
 
+    // Ensure all rows are of equal length
+    // check if the number of columns in each row (it.size) =n
+    if (board.any { it.size != n }) return false
+
 
     for (i in 0 until n) {
         val rowSet = mutableSetOf<String>()

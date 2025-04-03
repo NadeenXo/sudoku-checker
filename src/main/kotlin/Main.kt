@@ -203,6 +203,28 @@ fun main() {
         correctResult = false
     )
 
+    test(
+        name = "Invalid board 4x3",
+        result = isValidSudoku(
+            arrayOf(
+                arrayOf("1", "2", "-"),
+                arrayOf("-", "-", "-"),
+                arrayOf("3", "2", "-"),
+                arrayOf("2", "3", "1")
+            )
+        ),
+        correctResult = false
+    )
+    test(
+        name = "Invalid board 2x3",
+        result = isValidSudoku(
+            arrayOf(
+                arrayOf("3", "2", "-"),
+                arrayOf("2", "3", "1")
+            )
+        ),
+        correctResult = false
+    )
 }
 
 
